@@ -1,0 +1,103 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 3D Background Animation */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e1e2e, #24243e);
+}
+
+.cube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: moveCube 10s infinite linear;
+}
+
+@keyframes moveCube {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  50% { transform: translateY(500px) rotate(180deg); }
+  100% { transform: translateY(-100px) rotate(360deg); }
+}
+
+/* Register Box with Glassmorphism */
+.auth-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ff758c;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff5f7e;
+}
+
+p {
+  margin-top: 15px;
+  color: white;
+}
+
+a {
+  color: #ff758c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
